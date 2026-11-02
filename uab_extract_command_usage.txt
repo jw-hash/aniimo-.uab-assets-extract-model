@@ -1,0 +1,19 @@
+# Single file
+
+python uab_extract.py cdata.uab -o ./out
+
+# Entire directory (recursive), 4 processes in parallel
+
+python uab_extract.py ./Assetbundle -o ./out -j 4
+
+# Export only the required types (Parmon model related)
+
+python uab_extract.py ./Assetbundle -o ./out -t Mesh,Texture2D,MonoBehaviour,Avatar,GameObject,Transform,SkinnedMeshRenderer --mesh-json
+
+# First find out which package a specific asset is in, without writing to a file
+
+python uab_extract.py ./Assetbundle --find Parmon_10583
+
+# Only count the types for each package, without exporting
+
+python uab_extract.py ./Assetbundle --list

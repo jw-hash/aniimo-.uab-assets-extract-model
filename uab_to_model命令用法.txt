@@ -1,0 +1,6 @@
+# 全部动画 + FBX（需要 Blender）
+python uab_to_model.py ./包目录 -c Parmon_10583 -o ./out --fbx
+# 只导出部分动画
+python uab_to_model.py ./包目录 -c Parmon_10583 -o ./out --clips "Idle|Walk|Run" --fbx
+# 补全骨骼名
+python uab_to_model.py ./包目录 -c Parmon_10583 -o ./out --names my_names.json

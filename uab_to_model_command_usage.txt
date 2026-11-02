@@ -13,5 +13,7 @@ python uab_to_model.py ./package_directory -c Parmon_10583 -o ./out --names my_n
 # v2
 
 python uab_to_model.py ./package_directory --list-characters
+
 python uab_to_model.py ./package_directory -c Parmon_1058301 --list-variants
+
 python uab_to_model.py ./package_directory -c Parmon_10583 Parmon_1058301 Parmon_1058302 -o ./out -j 4 --fbx

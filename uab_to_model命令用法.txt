@@ -4,3 +4,11 @@ python uab_to_model.py ./包目录 -c Parmon_10583 -o ./out --fbx
 python uab_to_model.py ./包目录 -c Parmon_10583 -o ./out --clips "Idle|Walk|Run" --fbx
 # 补全骨骼名
 python uab_to_model.py ./包目录 -c Parmon_10583 -o ./out --names my_names.json
+
+# v2
+
+python uab_to_model.py ./包目录 --list-characters
+
+python uab_to_model.py ./包目录 -c Parmon_1058301 --list-variants
+
+python uab_to_model.py ./包目录 -c Parmon_10583 Parmon_1058301 Parmon_1058302 -o ./out -j 4 --fbx

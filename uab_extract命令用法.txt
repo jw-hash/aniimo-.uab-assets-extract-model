@@ -1,0 +1,14 @@
+# 单个文件
+python uab_extract.py cdata.uab -o ./out
+
+# 整个目录（递归），4 个进程并行
+python uab_extract.py ./Assetbundle -o ./out -j 4
+
+# 只导出需要的类型（Parmon 模型相关）
+python uab_extract.py ./Assetbundle -o ./out -t Mesh,Texture2D,MonoBehaviour,Avatar,GameObject,Transform,SkinnedMeshRenderer --mesh-json
+
+# 先查某个资产在哪个包里，不写文件
+python uab_extract.py ./Assetbundle --find Parmon_10583
+
+# 只统计每个包的类型，不导出
+python uab_extract.py ./Assetbundle --list
